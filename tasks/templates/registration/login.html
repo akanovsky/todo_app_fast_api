@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Přihlášení</title>
+</head>
+<body>
+    <h2>Přihlášení</h2>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Přihlásit se</button>
+    </form>
+    <p>Pokud nemáte účet, kontaktujte administrátora.</p>
+</body>
+</html>
