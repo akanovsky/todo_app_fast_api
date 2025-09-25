@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Přehled úkolů</title>
+</head>
+<body>
+    <h1>Moje úkoly</h1>
+
+    {% if tasks %}
+    <ul>
+    {% for task in tasks %}
+        <li>
+            <h3>{{ task.title }}</h3>
+            <p>{{ task.description }}</p>
+            <p>Status: {% if task.completed %}Dokončeno{% else %}Probíhá{% endif %}</p>
+        </li>
+    {% endfor %}
+    </ul>
+    {% else %}
+    <p>Nemáš žádné úkoly.</p>
+    {% endif %}
+</body>
+</html>
